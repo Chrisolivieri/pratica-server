@@ -15,11 +15,14 @@ const authorSchema = new Schema(
     },
     age: {
       type: Number,
-      min : 0,
-      max: 100,
-
+      minLenght: 0,
+      maxLenght: 100,
     },
-    role: String,
+    role: {
+      type: String,
+      enum: ["admin", "user"],
+      default: "user",
+    },
     approved: Boolean,
   },
   {

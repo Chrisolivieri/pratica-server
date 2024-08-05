@@ -14,11 +14,11 @@ route.get("/", async (req, res) => {
 
 route.get("/:id", async (req, res) => {
   // andiamo nel database e recuperiamo l'autore corrispondente all'id
-  
+  const id = req.params.id;
+
   try {
-    const id = req.params.id;
-    await author.findById(id);
-    res.send(author);
+    const findAuthor = await author.findById(id);
+    res.send(findAuthor);
   } catch (err) {
     res.status(400).send({ error: "something went wrong" });
   }

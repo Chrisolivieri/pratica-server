@@ -5,10 +5,9 @@ POST http://localhost:5000/authors
 Content-Type: application/json
 
 {
-    "name": "Christian",
-    
-    "age": 31,
-    "role": "User",
+    "name": "Giacomo",
+    "email": "sadsfdsf@adsad.it",
+    "age": 45,
     "approved": true
 }
 ###
@@ -23,3 +22,7 @@ Content-Type: application/json
 {
     "name" : "Carlo"
 }
+
+###
+
+GET http://localhost:5000/authors/66acfc3905cd283271ecfacd
